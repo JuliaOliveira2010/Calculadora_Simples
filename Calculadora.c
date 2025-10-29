@@ -16,7 +16,7 @@ int multi(float x, float y){
     printf("%.2f * %.2f = %.2f", x, y, x*y);
     return 0;
 }
-int div(float x, float y){
+int divisao(float x, float y){
     printf("Resultado: ");
     printf("%.2f / %.2f = %.2f", x, y, x/y);
     return 0;
@@ -40,10 +40,10 @@ int main(){
             printf("Opcao: ");
             scanf("%d", &o);
 
-            if (o<1 || o>5){
+            if (o!=1 || o!=2 || o!=3 || o!=4 || o!=5){
                 printf("Erro! Digite um numero valido\n");
             }
-        } while (o<1 || o>5);
+        } while (o!=1 || o!=2 || o!=3 || o!=4 || o!=5);
         
 
         if (o!=5){
@@ -68,7 +68,7 @@ int main(){
                         printf("Digite o segundo numero: ");
                         scanf("%f", &b);
                     }
-                    div(a, b);
+                    divisao(a, b);
                     break;
             }
 
