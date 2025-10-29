@@ -1,30 +1,30 @@
 #include <stdio.h>
 #include <string.h>
 
-int add(float x, float y){
+int add(int x, int y){
     printf("Resultado: ");
-    printf("%.2f + %.2f = %.2f", x, y, x+y);
+    printf("%d + %d = %d", x, y, x+y);
     return 0;
 }
-int sub(float x, float y){
+int sub(int x, int y){
     printf("Resultado: ");
-    printf("%.2f - %.2f = %.2f", x, y, x-y);
+    printf("%d - %d = %d", x, y, x-y);
     return 0;
 }
-int multi(float x, float y){
+int multi(int x, int y){
     printf("Resultado: ");
-    printf("%.2f * %.2f = %.2f", x, y, x*y);
+    printf("%d * %d = %d", x, y, x*y);
     return 0;
 }
-int divisao(float x, float y){
+int divisao(int x, int y){
     printf("Resultado: ");
-    printf("%.2f / %.2f = %.2f", x, y, x/y);
+    printf("%d / %d = %d", x, y, x/y);
     return 0;
 }
 
 int main(){
     int o;
-    float a, b;
+    int a, b;
     char r;
     printf("===============================\n");
     printf("      Calculadora Simples      \n");
@@ -48,9 +48,9 @@ int main(){
 
         if (o!=5){
             printf("Digite o primeiro numero: ");
-            scanf("%f", &a);
+            scanf("%d", &a);
             printf("Digite o segundo numero: ");
-            scanf("%f", &b);
+            scanf("%d", &b);
 
             switch (o){
                 case 1:
@@ -66,7 +66,7 @@ int main(){
                     while(b==0){
                         printf("Erro: Divisao por zero nao e permitida.\n");
                         printf("Digite o segundo numero: ");
-                        scanf("%f", &b);
+                        scanf("%d", &b);
                     }
                     divisao(a, b);
                     break;
