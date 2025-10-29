@@ -25,7 +25,7 @@ int divisao(float x, float y){
 int main(){
     int o;
     float a, b;
-    char r='s';
+    char r;
     printf("===============================\n");
     printf("      Calculadora Simples      \n");
     printf("===============================\n");
@@ -35,15 +35,15 @@ int main(){
     printf("3. Multiplicacao\n");
     printf("4. Divisao\n");
     printf("5. Sair\n");
-    do {
+    while (1) {
         do {
             printf("Opcao: ");
             scanf("%d", &o);
 
-            if (o!=1 || o!=2 || o!=3 || o!=4 || o!=5){
+            if (o!=1 && o!=2 && o!=3 && o!=4 && o!=5){
                 printf("Erro! Digite um numero valido\n");
             }
-        } while (o!=1 || o!=2 || o!=3 || o!=4 || o!=5);
+        } while (o!=1 && o!=2 && o!=3 && o!=4 && o!=5);
         
 
         if (o!=5){
@@ -81,9 +81,10 @@ int main(){
             } while (r!='s' && r!='n' && r!='S' && r!='N');
             
         }
-    } while(o!=5 && (r=='s' || r=='S'));
-    printf("===============================\n");
-    printf("Obrigado por usar nossa calculadora, ate mais!");
+        if (o==5 || r=='n' || r=='N') break;
+    }
+
+    printf("Ate mais! :)");
     
     return 0;
 }
